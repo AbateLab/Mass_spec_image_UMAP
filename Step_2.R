@@ -14,6 +14,16 @@ crdx=crd[1,] + 914 #offset of origin
 mse <-readMSIData(path,attach.only=TRUE)
 selindex <- pixels(mse, coord=list(x=crdx, y=crdy))
 mse=mse[,selindex]
+
+s <- spectra(mse)
+ssum <- colSums(s)
+id <- which(ssum>0)
+mse<-mse[,id]
+
+mse <- normalize(mse, method="tic")
+mse <- mzAlign(mse)
+mse <- process(mse)
+
 msspec <- spectra(mse)
 msmat <- msspec[,]
 matsize <-dim(msmat)
