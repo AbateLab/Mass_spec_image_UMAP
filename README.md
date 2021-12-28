@@ -1,3 +1,5 @@
+Please cite: Xu, L., Chang, KC., Payne, E.M. et al. Mapping enzyme catalysis with metabolic biosensing. Nat Commun 12, 6803 (2021). https://doi.org/10.1038/s41467-021-27185-9
+
 # Mass_spec_image_UMAP
 ## Contents
 Overview
